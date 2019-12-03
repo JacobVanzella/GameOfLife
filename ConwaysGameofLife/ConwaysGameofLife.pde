@@ -21,17 +21,17 @@ void setup() {
   frameRate(5);
   pause.pressed = paused;
 
-  cellGridCurrent[15][15] = true;
-  cellGridCurrent[16][14] = true;
-  cellGridCurrent[17][14] = true;
-  cellGridCurrent[17][15] = true;
-  cellGridCurrent[17][15] = true;
-  cellGridCurrent[17][16] = true;
+  // Default board setup.
+  for (int i = 0; i < 11; i++) {
+    if (i == 5) i++;
+    cellGridCurrent[10+i][16] = true;
+  }
 }
 
 void draw() {
-  line(0, 641, 641, 641);
+  line(0, 641, 641, 641);  // Bolder line for seperation of board and controls.
 
+  // Draws the cells on the board.
   for (int i = 0; i < numOfCells; i++) {
     for (int j = 0; j < numOfCells; j++) {
       if (cellGridCurrent[i][j]) {
@@ -45,7 +45,7 @@ void draw() {
 
   pause.draw();
   reset.draw();
-  if (!paused) updateCells();
+  if (!paused) updateCells();  // If not paused calls update to calculate the next board state.
 }
 
 // This method allaws the user to change the state of a cell by clicking it.
