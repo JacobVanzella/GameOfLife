@@ -21,11 +21,12 @@ void setup() {
   frameRate(5);
   pause.pressed = paused;
 
-  cellGridCurrent[3][3] = true;
-  cellGridCurrent[3][4] = true;
-  cellGridCurrent[4][3] = true;
-  cellGridCurrent[4][4] = true;
-  cellGridCurrent[6][3] = true;
+  cellGridCurrent[15][15] = true;
+  cellGridCurrent[16][14] = true;
+  cellGridCurrent[17][14] = true;
+  cellGridCurrent[17][15] = true;
+  cellGridCurrent[17][15] = true;
+  cellGridCurrent[17][16] = true;
 }
 
 void draw() {
