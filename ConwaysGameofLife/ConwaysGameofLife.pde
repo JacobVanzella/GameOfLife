@@ -1,5 +1,6 @@
 // Conway's Game of Life - Implemented by Jacob Vanzella
 // The goal of this project is to learn to use Processing 3 better and have fun.
+// Inspired by my good friend Ashish Maskeri <3
 
 int size = 640;
 int cellSize = 20;
